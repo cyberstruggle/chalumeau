@@ -1,0 +1,26 @@
+/*========== Start Contact Page  ==========*/
+.tb-contact-wrap.tb-style1 {
+  display: flex;
+
+  .tb-contact-left {
+    flex: 1;
+    border-right: 1px solid $base-color4;
+  }
+
+  .tb-contact-right {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-contact-wrap.tb-style1 {
+    display: flex;
+    display: block;
+  }
+
+  .tb-contact-wrap.tb-style1 .tb-contact-left {
+    border-right: none;
+    border-bottom: 1px solid $base-color4;
+  }
+}
+/*========== End Contact Page  ==========*/

@@ -1,0 +1,219 @@
+/*========== Start List  ==========*/
+.tb-insights-list.tb-style1 {
+  li {
+    border-top: 1px solid $base-color4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tb-insights-text {
+    padding: 18px 0;
+  }
+
+  .tb-insights-title {
+    margin-bottom: 0;
+    color: $base-color1;
+    font-size: 18px;
+  }
+
+  .tb-insights-subtitle {
+    color: $base-color3;
+    line-height: 1em;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+}
+
+// List Style
+.tb-list.tb-style1 {
+  li {
+    position: relative;
+    padding-left: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $base-color3;
+      font-size: 18px;
+    }
+  }
+}
+
+.tb-horizontal-list.tb-style1 {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+
+  .tb-list-title {
+    text-transform: uppercase;
+    font-size: 10px;
+    line-height: 1.6em;
+    margin-bottom: 1px;
+  }
+
+  .tb-list-number {
+    font-size: 24px;
+    color: $base-color1;
+    line-height: 1.2em;
+  }
+}
+
+.tb-horizontal-list.tb-style2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+
+  li {
+    margin: 0 50px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  i {
+    display: flex;
+    font-size: 21px;
+    margin-top: -1px;
+    margin-right: 6px;
+  }
+}
+
+// Card Heading List
+.tb-card-heading-list.tb-style1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-left: 12px;
+    font-size: 13px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  a:hover {
+    color: #007aff;
+  }
+}
+
+// End Card Heading List
+.tb-coin-list.tb-style1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1px;
+
+  li {
+    width: 33.333333%;
+    border-left: 1px solid $base-color4;
+    border-bottom: 1px solid $base-color4;
+    padding: 20px 30px;
+    min-height: 198px;
+    position: relative;
+  }
+
+  .tb-coin {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: $base-color1;
+    margin-bottom: 10px;
+  }
+
+  .tb-coin-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+  }
+
+  .tb-coin-price {
+    font-size: 28px;
+    line-height: 1.2em;
+    font-weight: 500;
+    color: $base-color1;
+  }
+
+  .tb-changes-percentage {
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    right: 30px;
+    top: 24px;
+  }
+}
+
+.tb-coin-list.tb-style2 {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $base-color4;
+    padding: 11px 30px;
+  }
+
+  .tb-coin {
+    display: flex;
+    align-items: center;
+  }
+
+  .tb-coin-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+  }
+
+  .tb-coin-text {
+    font-size: 16px;
+    color: $base-color1;
+
+    span {
+      display: block;
+      font-size: 12px;
+      line-height: 1.6em;
+      text-transform: uppercase;
+      color: $base-color2;
+      margin-top: 2px;
+    }
+  }
+
+  .tb-coin-price {
+    font-size: 16px;
+    color: $base-color1;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-horizontal-list.tb-style2 li {
+    margin: 0 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tb-coin-list.tb-style1 li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .tb-coin-list.tb-style1 li {
+    width: 100%;
+    border-left: none;
+  }
+
+  .tb-horizontal-list.tb-style2 li {
+    margin: 0 10px;
+  }
+}
+
+/*========== End List  ==========*/

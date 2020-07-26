@@ -1,0 +1,47 @@
+/*========== Start Tags  ==========*/
+.tb-tag-wrap.tb-style1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tb-tag {
+    display: inline-flex;
+    padding: 0 5px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 17px;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+.tb-post-tag {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 5px;
+  }
+
+  a {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1em;
+    padding: 3px 5px;
+    border-radius: 2px;
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+/*========== End Tags  ==========*/

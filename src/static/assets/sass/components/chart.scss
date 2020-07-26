@@ -1,0 +1,691 @@
+/*========== Start Chart Style  ==========*/
+/* Start Chart Heading */
+.tb-chart-heading {
+  &.tb-style1 {
+    h3 {
+      font-size: 36px;
+      margin-bottom: 0;
+      line-height: 1em;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  &.tb-style2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3px 0;
+
+    .tb-chart-heading-in {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $base-color3;
+      margin-bottom: 0;
+      line-height: 1.45em;
+    }
+
+    h3 {
+      font-size: 36px;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+  }
+
+  &.tb-style3 {
+    padding: 3px 0;
+
+    .tb-chart-heading-in {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+      padding-top: 3px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-right: 8px;
+      margin-bottom: 0;
+    }
+
+    p {
+      color: $base-color3;
+      font-size: 14px;
+      margin-bottom: -1px;
+    }
+  }
+
+  &.tb-style4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .tb-chart-heading-in {
+      display: flex;
+      flex-wrap: wrap;
+
+      >div {
+        margin-right: 20px;
+      }
+    }
+
+    .tb-chart-heading-title,
+    .tb-chart-heading-number {
+      span {
+        display: block;
+        color: $base-color3;
+        line-height: 1.6em;
+        font-size: 14px;
+      }
+    }
+
+    .tb-chart-heading-number {
+      span {
+        display: block;
+        font-size: 14px;
+        line-height: 1.6em;
+        font-weight: 500;
+        color: $base-color1;
+      }
+    }
+  }
+}
+
+/* End Chart Heading */
+// Start Chart Style
+
+.tb-chart-wrap.tb-style1 {
+  padding: 20px;
+  padding-top: 30px;
+
+  .tb-chart-in {
+    height: 299px;
+    position: relative;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style2 {
+  .tb-chart-in {
+    height: 76px;
+    position: relative;
+    border-bottom: 1.5px dashed $base-color4;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style3 {
+  padding: 30px;
+
+  .tb-chart-inside {
+    position: relative;
+  }
+
+  .tb-chart-in {
+    max-width: 229px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tb-active-device {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .tb-active-device-per {
+      font-size: 36px;
+      color: $base-color1;
+      position: relative;
+      line-height: 1em;
+      display: inline-block;
+
+      span {
+        font-size: 18px;
+        color: $base-color2;
+        position: absolute;
+        top: -11px;
+        right: -13px;
+      }
+    }
+
+    .tb-active-device-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $base-color3;
+      margin-top: 5px;
+    }
+  }
+
+  &.tb-type2 {
+    .tb-active-device {
+      .tb-active-device-per {
+        font-size: 32px;
+
+        span {
+          font-size: 14px;
+          top: -11px;
+          right: -10px;
+        }
+      }
+
+      .tb-active-device-title {
+        font-size: 10px;
+        margin-top: 2px;
+        line-height: 13px;
+      }
+    }
+
+    .tb-chart-in {
+      max-width: 248px;
+    }
+  }
+}
+
+.tb-circle-stroke.tb-style1 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  .tb-circle-color {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: block;
+    margin-right: 8px;
+  }
+
+  &.tb-type1 {
+    .tb-circle-color {
+      height: 10px;
+      width: 10px;
+      border-radius: 2px;
+    }
+  }
+}
+
+.tb-vertical-chart-wrap {
+  overflow: hidden;
+}
+
+.tb-vertical-chart-list {
+  height: 305px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  padding-left: 32px;
+  padding-top: 6px;
+}
+
+.tb-vertical-chart-graph {
+  width: 32px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tb-graph-col {
+  font-size: 13px;
+  color: $base-color3;
+  line-height: 11px;
+  position: relative;
+}
+
+.tb-graph-col:before {
+  content: "";
+  height: 1px;
+  width: 10000px;
+  position: absolute;
+  background-color: $base-color4;
+  left: 100%;
+  top: 50%;
+}
+
+.tb-vertical-chart {
+  height: 100%;
+  background-color: $main-color;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tb-vertical-chart-up {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+  padding-bottom: 21px;
+  background-color: $main-color;
+}
+
+.tb-vertical-chart-up:last-child {
+  margin-right: 0;
+}
+
+.tb-vertical-chart-wrap.tb-style1 .tb-vertical-chart-up:not(:last-child) {
+  margin-right: 15px;
+}
+
+.tb-vertical-chart-layer {
+  width: 100%;
+  background-color: $accent-color1;
+}
+
+.tb-vertical-chart-wrap.tb-style1 .tb-vertical-chart-layer {
+  background-color: $accent-color2;
+}
+
+.tb-chart-label {
+  text-align: center;
+  position: absolute;
+  white-space: nowrap;
+  width: 100%;
+  color: $base-color3;
+  bottom: -4px;
+  z-index: 1;
+}
+
+.tb-chart-label-rotate .tb-chart-label {
+  transform: rotate(-45deg);
+}
+
+.tb-vertical-chart-stroke {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  margin-top: 15px;
+}
+
+.tb-vertical-chart-stroke li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.tb-vertical-chart-stroke li:last-child {
+  margin-right: 0;
+}
+
+.tb-vertical-chart-stroke span {
+  display: block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: $accent-color1;
+  margin-right: 8px;
+}
+
+.tb-vertical-chart-wrap.tb-style1 .tb-vertical-chart-stroke span,
+.tb-vertical-chart-wrap.tb-style2 .tb-vertical-chart-stroke span {
+  background: $accent-color2;
+}
+
+.tb-vertical-chart-up-pair {
+  height: 100%;
+  flex: 1;
+  margin-right: 30px;
+  display: flex;
+  position: relative;
+  padding-bottom: 21px;
+  flex-direction: row;
+  align-items: flex-end;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .tb-vertical-chart-up {
+    height: 100%;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  .tb-vertical-chart-layer {
+    height: 100% !important;
+    width: 100%;
+  }
+}
+
+.tb-chart-wrap.tb-style4 {
+  padding: 25px 30px;
+}
+
+.tb-chart-wrap.tb-style5 {
+  .tb-chart-in {
+    margin-left: -10px;
+    margin-right: -5px;
+    height: 163px;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style6 {
+  .tb-chart-in {
+    margin-left: -10px;
+    margin-right: -5px;
+    height: 239px;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style7 {
+  .tb-chart-in {
+    height: 40px;
+    width: 100px;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+
+  &.tb-type1 {
+    .tb-chart-in {
+      height: 34px;
+    }
+  }
+}
+
+.tb-chart-wrap.tb-style8 {
+  position: relative;
+
+  .tb-chart-in {
+    height: 221px;
+    width: calc(100% + 8px);
+    margin-left: -5px;
+    // margin-bottom: -10px;
+  }
+
+  canvas {
+    height: 100%;
+  }
+}
+
+.tb-chart-wrap.tb-style9 {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 30px;
+
+  .tb-chart-in {
+    height: 232px;
+  }
+
+  canvas {
+    height: 100%;
+  }
+}
+
+.tb-chart-wrap.tb-style10,
+.tb-chart-wrap.tb-style11 {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 30px;
+
+  .tb-chart-in {
+    height: 271px;
+  }
+
+  canvas {
+    height: 100%;
+  }
+}
+
+.tb-chart-wrap.tb-style10.tb-type1 {
+  .tb-chart-in {
+    height: 378px;
+  }
+}
+
+.tb-chart-wrap.tb-style11 {
+  padding-bottom: 20px;
+  padding-top: 25px;
+
+  .tb-chart-in {
+    height: 199px;
+  }
+}
+
+.tb-chart-wrap.tb-style12 {
+  width: 70px;
+
+  .tb-chart-in {
+    height: 35px;
+    width: 100px;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style13 {
+  margin-top: 10px;
+
+  .tb-chart-in {
+    height: 80px;
+    width: 100%;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style14 {
+
+  .tb-chart-in {
+    height: 275px;
+    width: 100%;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style16 {
+
+  .tb-chart-in {
+    height: 120px;
+    width: 100%;
+    max-width: 380px;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+.tb-chart-wrap.tb-style17 {
+  padding: 0 25px;
+
+  .tb-chart-in {
+    height: 192px;
+    width: 100%;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+
+.tb-chart-wrap.tb-style15 {
+  padding: 0 20px;
+
+  .tb-chart-in {
+    height: 378px;
+    width: 100%;
+  }
+
+  canvas {
+    height: 100% !important;
+  }
+}
+
+// Line Chart Stoke font-style:
+.tb-line-stroke.tb-style1 {
+  display: flex;
+  align-items: center;
+
+  li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .tb-stroke-circle {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: $accent-color1;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  &.tb-type1 {
+    .tb-stroke-circle {
+      height: 10px;
+      width: 10px;
+      border-radius: 2px;
+    }
+  }
+}
+
+
+// funnel-chart
+.tb-funnel-chart-wrap.tb-style1 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.tb-funnel-chart {
+  width: 247px;
+  height: 225px;
+  margin: auto;
+  position: relative;
+  background: #7000ff;
+  overflow: hidden;
+
+  .tb-funnel-structure-left,
+  .tb-funnel-structure-right {
+    height: 115%;
+    width: 47%;
+    position: absolute;
+    top: 0;
+    background: $main-color;
+    margin-top: 40px;
+  }
+
+  .tb-funnel-structure-left {
+    transform: skew(0deg, 55deg);
+    left: -20px;
+  }
+
+  .tb-funnel-structure-right {
+    transform: skew(0deg, -55deg);
+    right: -20px;
+  }
+
+  .tb-funnel-structure-middle {
+    position: absolute;
+    height: 50px;
+    width: 50%;
+    bottom: -22px;
+    left: 42%;
+    transform: skew(-71deg, 0deg);
+    background-color: $main-color;
+  }
+}
+
+.tb-funnel-chart {
+  .tb-vertical-chart-wrap {
+    height: 100%;
+  }
+
+  .tb-vertical-chart-list {
+    height: 100%;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .tb-vertical-chart-up {
+    padding-bottom: 0;
+  }
+}
+
+.tb-chart-color1 {
+  background-color: $accent-color2;
+}
+
+.tb-chart-color2 {
+  background-color: $accent-color2;
+}
+
+.tb-chart-wrap.tb-style1.tb-type1 .tb-chart-in {
+  height: 218px;
+}
+
+.tb-chart-wrap.tb-style1.tb-type1 {
+  padding: 0;
+}
+/*========== End Chart Style  ==========*/

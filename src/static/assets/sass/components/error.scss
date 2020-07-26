@@ -1,0 +1,73 @@
+/*========== Start Error Page  ==========*/
+.tb-error-wrap.tb-style1 {
+  padding: 60px 0;
+}
+
+.tb-error-wrap.tb-style1,
+.tb-error-wrap.tb-style2 {
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+
+  .container {
+    max-width: 1330px;
+  }
+}
+
+.tb-error-text.tb-style1 {
+  .tb-error-title {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  .tb-error-desc {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 25px;
+    max-width: 560px;
+  }
+
+  &.tb-color1 {
+    .tb-error-title {
+      color: $main-color;
+    }
+
+    .tb-error-desc {
+      color: $main-color;
+      opacity: 0.7;
+    }
+
+    .tb-style1.tb-color3 {
+      color: $main-color;
+      border-color: $main-color;
+
+      &:hover {
+        color: $accent-color2;
+      }
+    }
+  }
+}
+
+.tb-error-img.tb-style2 {
+  width: 50vw;
+  height: 100vh;
+  margin-left: -15px;
+}
+
+.tb-error-wrap.text-center .tb-error-desc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .tb-error-img.tb-style2 {
+    width: 100%;
+    height: 350px;
+    margin-left: -0;
+  }
+
+  .tb-error-wrap.tb-style2 {
+    padding: 60px 0;
+  }
+}
+/*========== End Error Page  ==========*/

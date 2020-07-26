@@ -1,0 +1,60 @@
+/*========== Start Page Nav  ==========*/
+.tb-page-nav.tb-style1 {
+  padding-left: 210px;
+  border: 1px solid $base-color4;
+  background-color: $main-color;
+  border-radius: 4px;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  a {
+    display: inline-block;
+    padding: 20px 0;
+    font-size: 16px;
+    color: $base-color3;
+    font-weight: 500;
+    position: relative;
+
+    &:hover {
+      color: $base-color1;
+    }
+  }
+
+  .tb-active {
+    a {
+      color: $base-color1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        background-color: $accent-color2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tb-page-nav.tb-style1 {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .tb-page-nav.tb-style1 li:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+/*========== End Page Nav  ==========*/

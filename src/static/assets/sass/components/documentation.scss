@@ -1,0 +1,258 @@
+/*========== Start Documentation  ==========*/
+.tb-doc-wrap {
+  display: flex;
+
+  .tb-doc-left {
+    margin-right: 70px;
+    width: 270px;
+    flex: none;
+  }
+}
+
+/*Doc Nav*/
+.tb-doc-header.tb-style1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: $main-color;
+  border-right: 1px solid $base-color4;
+}
+
+.tb-doc-nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tb-doc-nav-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.tb-doc-nav-list .tb-doc-dropdown.tb-doc-active {
+  display: block;
+}
+
+.tb-doc-nav-list li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.tb-doc-nav-list a {
+  font-size: 14px;
+  color: $base-color1;
+  font-weight: 500;
+  padding: 7px 15px;
+  display: block;
+  width: 100%;
+  line-height: 1.6em;
+  border-radius: 4px;
+}
+
+.tb-doc-nav-list ul a {
+  padding-left: 30px;
+}
+
+.tb-doc-nav-list a:hover,
+.tb-doc-nav-list a.active {
+  background-color: $base-color5;
+}
+
+.tb-doc-nav-list ul ul a {
+  padding-left: 40px;
+}
+
+.tb-doc-nav {
+  width: 270px;
+  display: block;
+  position: fixed;
+}
+
+.tb-doc-container {
+  padding-left: 310px;
+  padding-right: 30px;
+}
+
+.tb-doc-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tb-doc-section h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.tb-doc-section p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 22px;
+}
+
+.tb-doc-section p:last-child {
+  margin-bottom: 0;
+}
+
+.tb-doc-header .tb-site-title {
+  display: block;
+  padding: 28px 20px;
+  font-size: 22px;
+}
+
+.tb-doc-has-children {
+  position: relative;
+}
+
+.tb-doc-nav .tb-dropdown-btn {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 0;
+  top: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tb-doc-nav .tb-dropdown-btn:before,
+.tb-doc-nav .tb-dropdown-btn:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 8px;
+  background-color: $base-color2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.tb-doc-nav .tb-dropdown-btn:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.tb-doc-nav .tb-dropdown-btn.tb-active:after,
+.tb-doc-nav .tb-doc-dropdown.tb-doc-active+.tb-dropdown-btn:after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+// Doc Text Style
+.tb-doc-body h1 {
+  font-size: 56px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.tb-doc-subtitle {
+  font-size: 21px;
+  line-height: 1.6em;
+}
+
+.tb-doc-body h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.tb-doc-paragraph {
+  p {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tb-doc-nav-dropdown-btn {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 8px;
+  right: 5px;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.tb-doc-nav-dropdown-btn:before {
+  content: '';
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  right: 4px;
+  top: 7px;
+  z-index: 2;
+  cursor: pointer;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $base-color3;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.tb-doc-nav-dropdown-btn.active:before {
+  transform: rotate(0deg);
+}
+
+.tb-structure-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 15px;
+
+    li {
+      display: block;
+      position: relative;
+
+      &:before {
+        content: '|--';
+        display: inline-block;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.tb-doc-box {
+  border: 1px solid $base-color4;
+  border-radius: 4px;
+  padding: 15px 20px;
+}
+
+.tb-doc-paragraph .tb-table.tb-style1.tb-type1 .table {
+  min-width: 100%;
+}
+
+@media screen and (max-width: 1450px) {
+  .tb-doc-wrap .tb-doc-left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-doc-body h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 0px;
+  }
+
+  .tb-doc-subtitle {
+    font-size: 18px;
+  }
+}
+
+/*========== End Documentation  ==========*/

@@ -1,0 +1,272 @@
+/*========== Start Only for dark version  ==========*/
+.tb-theme-options .tb-theme-options-switch,
+.tb-theme-options-settings {
+  box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.04);
+}
+
+.tb-sidebar-nav-list li.active>a,
+.tb-sidebar-nav-list li.active>a .tb-sidebar-link-icon,
+.tb-btn.tb-style3,
+.tb-sidebar-nav-list li.active>a:hover,
+.tb-btn.tb-add-btn {
+  color: $base-color1;
+}
+
+.tb-option-switch span {
+  background-color: $base-color1;
+}
+
+.tb-live-chat-wrap {
+  box-shadow: 0px 4px 36px 4px rgba(255, 255, 255, 0.05);
+}
+
+// Dark Logo Background
+.tb-main-header-left.tb-reverse-color {
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.tb-sidebarheader-toggle.tb-reverse-color div {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+// Dark Header
+.tb-header.tb-style1.tb-reverse-color .tb-main-header .tb-main-header-left {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.tb-header.tb-reverse-color {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+
+  .tb-megamenu-title,
+  .tb-dropdown.tb-style2 .tb-subdropdown-title,
+  .tb-dropdown.tb-style3 .tb-subdropdown-title,
+  .tb-dropdown.tb-style4 .tb-subdropdown-title,
+  .tb-dropdown.tb-style5 .tb-subdropdown-title,
+  .tb-dropdown.tb-style6 .tb-subdropdown-title,
+  .tb-dropdown.tb-style7 .tb-subdropdown-title,
+  .tb-nofify-title,
+  .tb-nofify-list.tb-style1 .tb-nofify-text .tb-nofify-text-head,
+  .tb-notify-dropdown .tb-btn.tb-style2:hover {
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .tb-nav-list>li>a,
+  .tb-nav-list ul a,
+  .tb-profile-nav .tb-dropdown a,
+  .tb-search.tb-style1 .tb-search-input,
+  .tb-profile-nav.tb-style1 .tb-profile-nav-text h4,
+  .tb-nofify-list.tb-style1 li a:hover,
+  .tb-btn.tb-style2,
+  .tb-nofify-list.tb-style2 .tb-nofify-text h3,
+  .tb-nofify-list.tb-style1 .tb-nofify-text span {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .tb-nav-list>li>a>i,
+  .tb-ex-nav-btn,
+  .tb-profile-nav.tb-style1 .tb-profile-nav-text span,
+  .tb-desc-cat,
+  .tb-nofify-list.tb-style1 .tb-nofify-text .tb-notify-time,
+  .tb-dropdown.tb-style1 li i {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .tb-desktop-nav .tb-nav-list>li:hover>a,
+  .tb-desktop-nav .tb-nav-list ul a:hover,
+  .tb-desktop-nav .tb-nav-list .tb-sub-megamenu-list li.active a {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .tb-desktop-nav .tb-has-children .tb-megamenu-in,
+  .tb-desktop-nav .tb-megamenu-col,
+  .tb-profile-nav.tb-style1,
+  &.tb-style1 .tb-main-header .tb-main-header-left,
+  &.tb-style1 .tb-main-header .tb-main-header-right,
+  .tb-main-header-left,
+  .tb-nofify-title,
+  .tb-nofify-list.tb-style2 a:hover,
+  .tb-nofify-list.tb-style1 li,
+  .tb-dropdown,
+  .tb-dropdown.tb-style1 .tb-dropdown-cta,
+  .tb-dropdown.tb-style2 .tb-dropdown-cta,
+  .tb-dropdown.tb-style3 .tb-dropdown-cta,
+  .tb-dropdown.tb-style4 .tb-dropdown-cta,
+  .tb-search.tb-style1 .tb-search-input,
+  hr {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .tb-online-status {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .tb-online-status.tb-live {
+    background-color: $accent-color3;
+  }
+
+  .tb-nofify-list.tb-style1 li a:hover,
+  .tb-notify-dropdown .tb-btn.tb-style2:hover,
+  .tb-nofify-list.tb-style2 a:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .tb-desktop-nav .tb-has-children .tb-megamenu-in,
+  .tb-dropdown,
+  .tb-search.tb-style1 .tb-search-input,
+  .tb-nofify-list.tb-style1 {
+    background-color: #fff;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.tb-header.tb-reverse-color+.tb-sidebarheader-toggle div {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+// End Dark Header
+
+// Dark Sidebar
+.tb-sidebarheader.tb-reverse-color {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.1);
+
+  &.tb-white-bg .tb-sidebarheader-in {
+    background-color: #fff;
+  }
+
+  .tb-sidebarheader-in {
+    background-color: #fff;
+  }
+
+  .tb-sidebar-nav-list,
+  .tb-sidebar-nav-list a,
+  &.tb-messenger-sidebar .tb-user-list .tb-user-name,
+  .tb-user.tb-style2 .tb-user-name,
+  .tb-user-list .tb-user-name {
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .tb-user.tb-style1:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .tb-sidebar-nav-list .tb-sidebar-link-icon,
+  .tb-user-list .tb-user-time,
+  .tb-search.tb-style2 button,
+  .tb-user-heading.tb-style1 .tb-user-title,
+  .tb-sidebar-nav-title {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .tb-search.tb-style2 input {
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .tb-sidebar-nav-list a:hover,
+  .tb-sidebar-nav-list li.active>a,
+  .tb-user-list .tb-user.tb-style1:hover,
+  .tb-user-list .active .tb-user.tb-style1 {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .tb-sidebar-nav-list li.tb-sidebar-has-children .tb-dropdown-arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .tb-sidebar-nav-list li.active>a .tb-sidebar-link-icon,
+  .tb-sidebar-nav-list li.active>a,
+  .tb-sidebar-nav-list li.active>a:hover {
+    color: $accent-color1;
+  }
+
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .tb-search.tb-style2 {
+    background-color: transparent;
+  }
+}
+
+// End Dark Sidebar
+.tb-light-logo {
+  display: none;
+}
+
+.tb-dark-logo {
+  display: block;
+}
+
+.tb-reverse-color {
+  .tb-light-logo {
+    display: block;
+  }
+
+  .tb-dark-logo {
+    display: none;
+  }
+}
+
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {
+  background-color: $base-color5;
+}
+
+.tb-error-wrap.tb-style2.tb-type1 .tb-error-title {
+  color: #222;
+}
+
+.tb-error-wrap.tb-style2.tb-type1 .tb-error-desc {
+  color: rgba(34, 34, 34, 0.7);
+}
+
+.tb-error-wrap.tb-style2.tb-type2 .tb-error-title {
+  color: #fff;
+}
+
+.tb-error-wrap.tb-style2.tb-type2 .tb-error-desc {
+  color: #fff;
+  opacity: 0.7;
+}
+
+/*========== End Only for dark version  ==========*/

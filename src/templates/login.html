@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %}
+  login
+{% endblock page_title %}
+{% block body %}
+<body class="tb-white-bg">
+    <div class="tb-login-wrap tb-style1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-1">
+            <div class="tb-vertical-middle">
+              <div class="tb-vertical-middle-in">
+                <div class="tb-signup-img tb-style1">
+                  <img src="{% static 'assets/img/logo.png' %}" alt="">
+                </div>
+              </div>
+            </div>
+          </div><!-- .col -->
+          <div class="col-lg-4">
+            <div class="tb-vertical-middle">
+              <div class="tb-vertical-middle-in">
+                <form action="{% url 'web:login_view' %}" method="POST" class="tb-form tb-style1">
+                  {% csrf_token %}
+                  <h2 class="tb-form-title">Sign in to access Chalumeau</h2>
+                  <div class="tb-height-b25 tb-height-lg-b25"></div>
+                  {% for message in messages %}
+                  <div class="messages">
+                    <div class="alert alert-dismissable bg-{% if message.tags %}{{message.tags|lower}}{% endif %}">
+                        <p class="mb-0 alert-p">{{ message|safe }} <button type="button" class="close pt-1" data-dismiss="alert">×</button></p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="tb-form-field">
+                        <input type="text" placeholder="Username" name="username">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="tb-form-field">
+                        <input type="password" placeholder="Password" name="password">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+
+                      <div class="tb-height-b20 tb-height-lg-b20"></div>
+                      <button href="#" class="tb-form-btn tb-style1 tb-color1"><span>Sign In</span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- .container -->
+    </div>
+  
+
+    <!-- Scripts -->
+    <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/Chart.min.js' %}"></script>
+    <script src="{% static 'assets/js/chartjs.dark.js' %}"></script>
+    <script src="{% static 'assets/js/smooth-scrollbar.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+{% endblock body %}

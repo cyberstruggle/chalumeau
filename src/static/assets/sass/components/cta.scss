@@ -1,0 +1,65 @@
+/*========== Start CTA  ==========*/
+.tb-cta.tb-style1,
+.tb-cta.tb-style2 {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  border-radius: 4px;
+
+  .tb-cta-img {
+    margin-right: 30px;
+    flex: none;
+  }
+
+  .tb-cta-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .tb-cta-subtitle {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 24px;
+  }
+}
+
+.tb-cta.tb-style2 {
+  padding: 0;
+
+  .tb-cta-title {
+    font-size: 36px;
+    margin-bottom: 6px;
+  }
+
+  .tb-cta-subtitle {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+
+  .tb-btn.tb-style3 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-cta.tb-style1 {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .tb-cta-img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .tb-cta.tb-style2 {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/*========== End CTA  ==========*/

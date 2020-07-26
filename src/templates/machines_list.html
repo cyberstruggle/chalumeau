@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+Machine's List
+{% endblock page_title %}
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12">
+      <div class="tb-card tb-style1 tb-height-auto">
+        <div class="tb-card-heading">
+          <div class="tb-card-heading-left">
+            <h2 class="tb-card-title">Machine's List</h2>
+          </div>
+          <div class="tb-card-heading-right">
+            <h2 class="tb-card-title">Total : {{all_m.count}}</h2>
+          </div>
+        </div>
+        <div class="tb-card-body">
+          <div class="tb-table tb-style1 table-responsive tb-auto-width">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Public IP</th>
+                  <th>Local IP</th>
+                  <th>Hostname</th>
+                  <th>Architecture</th>
+                  <th>Domain</th>
+                  <th>Username</th>
+                  <th>Credentials</th>
+                  <th>Download Passwords</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {% for machine in machines %}
+                  <tr>
+                    <td>{{machine.host_ip}}</td>
+                    <td>{{machine.host_local_ip}}</td>
+                    <td>{{machine.host_name}}</td>
+                    <td>{{machine.host_arch}}</td>
+                    <td>{{machine.host_domain}}</td>
+                    <td>{{machine.host_username}}</td>
+                    <td>
+                      <div class="tb-tag-wrap tb-style1">
+                          <a href="{{machine.credsurl}}"><button type="button" class="btn btn-info btn-sm">View</button>   </a>      
+                      </div>
+                    </td>
+                    <td>
+                      <div class="tb-tag-wrap tb-style1">
+                          <a href="{{machine.downloadcredsurl}}"><button type="button" class="btn btn-info btn-sm">Download</button>   </a>      
+                      </div>
+                    </td>
+                  </tr> 
+                  {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+          <!-- .tb-table -->
+          <hr>
+          {% include "inc/paginate.html" with page_obj=machines %}
+        </div>
+      </div><!-- .tb-card -->
+    </div><!-- .col -->
+</div>
+{% endblock content %}
+
+
+

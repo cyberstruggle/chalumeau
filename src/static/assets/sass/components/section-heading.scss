@@ -1,0 +1,20 @@
+/*========== Start Section Heading  ==========*/
+.tb-sectin-heading.tb-style1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  .tb-section-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 7px;
+    margin-top: -3px;
+  }
+
+  .tb-section-sub-title {
+    font-size: 16px;
+    margin-bottom: -3px;
+  }
+}
+/*========== End Section Heading  ==========*/

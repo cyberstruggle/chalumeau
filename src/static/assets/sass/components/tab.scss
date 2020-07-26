@@ -1,0 +1,478 @@
+/*========== Start Tabs  ==========*/
+.tb-tab-body-text {
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+.tb-tab-body-text p:last-child {
+  margin-bottom: 0;
+}
+
+.tb-tab {
+  display: none;
+}
+
+.tb-tab.tb-active {
+  display: block;
+}
+
+.tb-tabs.tb-style1 {
+  .tb-tab-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+
+    a {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      min-width: 140px;
+      border-right: 1px solid $base-color4;
+      border-bottom: 1px solid $base-color4;
+      padding: 15px;
+      position: relative;
+
+      &:hover {
+        background-color: $base-color5;
+      }
+
+      &:before {
+        content: '';
+        height: 3px;
+        width: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $accent-color1;
+        transition: all 0.4s ease;
+      }
+    }
+
+    .tb-active {
+      a {
+        border-bottom-color: transparent;
+
+        &:before {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .tb-tab-sub-heading {
+      color: $base-color3;
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .tb-tab-heading {
+      font-size: 24px;
+      color: $base-color1;
+      line-height: 1.1em;
+    }
+  }
+
+  &.tb-type1 {
+    .tb-tab-links {
+      a {
+        padding: 15px 30px;
+        position: relative;
+        min-width: initial;
+      }
+
+      .tb-tab-heading {
+        font-size: 14px;
+        color: $base-color2;
+      }
+
+      .tb-active {
+        .tb-tab-heading {
+          color: $base-color1;
+        }
+      }
+    }
+  }
+}
+
+.tb-tabs.tb-style2 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+
+  .tb-tab-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-width: 350px;
+    width: 100%;
+    line-height: 1.6em;
+    flex: none;
+    margin-right: 30px;
+
+    a {
+      display: block;
+      font-size: 14px;
+      padding: 8px 15px;
+      color: $base-color1;
+    }
+
+    li.tb-active {
+      a {
+        background-color: $base-color5;
+      }
+    }
+  }
+
+  .tb-tab-content {
+    flex: 1;
+  }
+}
+
+.tb-tabs.tb-style2.tb-type1 {
+  .tb-tab-links {
+    max-width: 230px;
+  }
+
+  .tb-tab-content {
+    padding-right: 30px;
+  }
+
+  .tb-tab-links a {
+    display: flex;
+    align-items: center;
+  }
+
+  .tb-tab-links a i {
+    margin-right: 5px;
+  }
+}
+
+
+
+.tb-tabs.tb-style3 {
+  .tb-tab-links-wrap {
+    border-bottom: 1px solid $base-color4;
+  }
+
+  .tb-tab-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    i {
+      font-size: 22px;
+      display: flex;
+      margin-right: 10px;
+    }
+
+    a {
+      font-size: 16px;
+      color: $base-color3;
+      display: flex;
+      align-items: center;
+      padding: 0.9em 1.9em;
+      line-height: 1.6em;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0%;
+        background-color: $accent-color2;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .tb-active {
+      a {
+        color: $accent-color2;
+
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &.tb-type1 {
+    .tb-tab-links-wrap {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.tb-tabs.tb-style4 {
+  .tb-tab-links-wrap {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $base-color4;
+
+  }
+
+  .tb-tab-links-wrap-in {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tb-tab-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+
+    li {
+      position: relative;
+
+      &:first-child:before,
+      &:last-child:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        background-color: $main-color;
+      }
+
+      &:first-child:before {
+        left: 0;
+      }
+
+      &:last-child:before {
+        right: 0;
+      }
+    }
+
+    i {
+      font-size: 22px;
+      display: flex;
+      margin-right: 10px;
+    }
+
+    a {
+      font-size: 16px;
+      color: $base-color3;
+      display: flex;
+      align-items: center;
+      padding: 1.3em 1.9em 0.9em;
+      line-height: 1.6em;
+      position: relative;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+    }
+
+    .tb-tab-number-wrap {
+      background-color: $main-color;
+    }
+
+    .tb-tab-number {
+      height: 35px;
+      width: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $base-color3;
+      color: $main-color;
+      border-radius: 50%;
+      font-size: 14px;
+      margin-bottom: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .tb-active {
+      a {
+        color: $base-color1;
+      }
+
+      .tb-tab-number {
+        background-color: $accent-color2;
+        border-color: $accent-color2;
+        color: #fff;
+      }
+    }
+  }
+
+  .tb-tab-bar {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 39px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $base-color4;
+  }
+
+  &.tb-type1 {
+    .tb-tab-number {
+      box-shadow: 0 0 0 10px $main-color;
+    }
+  }
+
+  &.tb-type2 {
+    .tb-tab-number {
+      background-color: $main-color;
+      color: $base-color2;
+      border: 1px solid $base-color4;
+    }
+
+    .tb-active {
+      .tb-tab-number {
+        color: #fff;
+      }
+    }
+
+    .tb-tab-bar {
+      background-color: $base-color4;
+    }
+  }
+
+  &.tb-type3 {
+    .tb-tab-number {
+      background-color: $main-color;
+      color: $base-color2;
+      border: 1px solid $base-color4;
+    }
+
+    .tb-active {
+      .tb-tab-number {
+        color: #fff;
+      }
+    }
+
+    .tb-tab-bar {
+      background-color: $base-color4;
+      height: 5px;
+      top: 36px;
+    }
+  }
+
+  &.tb-type4 {
+    .tb-tab-number {
+      background-color: $main-color;
+      color: $base-color2;
+      border: 1px solid $base-color4;
+    }
+
+    .tb-active {
+      .tb-tab-number {
+        color: #fff;
+      }
+    }
+
+    .tb-tab-bar {
+      background-color: $base-color6;
+      height: 5px;
+      top: 36px;
+      border: 1px solid $base-color4;
+    }
+  }
+}
+
+.tb-tabs.tb-style5 {
+  .tb-tab-links {
+    margin: 0;
+    list-style: none;
+    padding: 0 30px;
+    border-bottom: 1px solid $base-color4;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+      font-size: 16px;
+      line-height: 1.6em;
+      display: inline-block;
+      padding: 12px 15px;
+      position: relative;
+      color: $base-color3;
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        width: 0%;
+        background-color: $accent-color2;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .tb-active {
+      a {
+        color: $base-color1;
+
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-tabs.tb-style1 .tb-tab-links a {
+    min-width: initial;
+  }
+
+  .tb-tabs.tb-style2 {
+    flex-direction: column;
+
+    .tb-tab-links {
+      margin-right: 0;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  .tb-tabs.tb-style2.tb-type1 .tb-tab-content {
+    padding-left: 30px;
+  }
+
+  .tb-tabs.tb-style2.tb-type1 .tb-tab-links {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-tabs.tb-style4 .tb-tab-links a {
+    padding: 1.3em 1em 0.9em;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .tb-tabs.tb-style1 .tb-tab-links .tb-active a {
+    border-bottom-color: $base-color4;
+  }
+
+  .tb-tabs.tb-style4 .tb-tab-bar {
+    display: none;
+  }
+  .tb-tabs.tb-style3 .tb-tab-links a {
+    padding: 0.9em 1em;
+}
+}
+
+/*========== End Tabs  ==========*/

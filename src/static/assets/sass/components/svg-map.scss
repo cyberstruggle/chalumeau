@@ -1,0 +1,50 @@
+/*========== Start SVG Map  ==========*/
+#svg-usa {
+  height: 200px;
+  background-color: transparent !important;
+}
+.vmap-wrapper.tb-style1,
+.vmap-wrapper.tb-style1#svg-usa {
+  height: 280px;
+  background-color: transparent !important;
+}
+.jqvmap-label {
+  padding: 2px 10px;
+  background-color: $main-color;
+  border-radius: 2px;
+  font-size: 12px;
+  color: $base-color2;
+  opacity: 1;
+  border: 1px solid $base-color4;
+}
+
+.jqvmap-region {
+    cursor: pointer;
+    stroke-opacity: 1;
+    stroke: $main-color;
+}
+
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+  border-radius: 2px;
+  background-color: $base-color3;
+  width: 14px;
+  height: 13px;
+  line-height: 7px;
+  padding: 0;
+  left: 0;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jqvmap-zoomin:hover,
+.jqvmap-zoomout:hover {
+  background-color: $base-color2;
+}
+
+.jqvmap-zoomout {
+  top: 28px;
+}
+/*========== End SVG Map  ==========*/

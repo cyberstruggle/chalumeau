@@ -1,0 +1,112 @@
+/*========== Start Alart ==========*/
+.tb-alert-text {
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+.tb-alert {
+  font-size: 14px;
+  line-height: 1.6em;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border: 1px solid;
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  hr {
+    margin: 5px 0;
+    opacity: 0.3;
+  }
+  &.tb-style1 {
+    padding: 15px 20px;
+  }
+}
+
+.tb-primary {
+  color: $accent-color6;
+  border-color: rgba($accent-color6, 0.6);
+  background-color: rgba($accent-color6, 0.1);
+
+  h2 {
+    color: $accent-color6;
+  }
+  hr {
+    border-color: $accent-color6;
+  }
+}
+
+.tb-success {
+  color: $accent-color3;
+  border-color: rgba($accent-color3, 0.6);
+  background-color: rgba($accent-color3, 0.1);
+
+  h2 {
+    color: $accent-color3;
+  }
+  hr {
+    border-color: $base-color3;
+  }
+}
+
+.tb-info {
+  color: $accent-color1;
+  border-color: rgba($accent-color1, 0.6);
+  background-color: rgba($accent-color1, 0.1);
+
+  h2 {
+    color: $accent-color1;
+  }
+  hr {
+    border-color: $accent-color1;
+  }
+}
+
+.tb-danger {
+  color: $accent-color4;
+  border-color: rgba($accent-color4, 0.6);
+  background-color: rgba($accent-color4, 0.1);
+
+  h2 {
+    color: $accent-color4;
+  }
+  hr {
+    border-color: $accent-color4;
+  }
+}
+
+.tb-primary-text {
+  color: $accent-color6;
+}
+
+.tb-success-text {
+  color: $accent-color3;
+}
+
+.tb-info-text {
+  color: $accent-color1;
+}
+
+.tb-danger-text {
+  color: $accent-color4;
+}
+
+.tb-alert-wrap .tb-alert:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.tb-link {
+  color: $accent-color2;
+}
+/*========== End Alart ==========*/

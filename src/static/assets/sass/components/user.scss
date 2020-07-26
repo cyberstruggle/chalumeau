@@ -1,0 +1,189 @@
+/*========== Start User  ==========*/
+.tb-user-heading.tb-style1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 30px 7px;
+  margin-top: 0px;
+
+  .tb-user-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $base-color3;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .tb-user-options {
+    font-size: 14px;
+    display: flex;
+    color: $base-color3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: $base-color2;
+    }
+  }
+
+  &.tb-type1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Style1
+.tb-user-list {
+  .tb-user.tb-style1 {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+  }
+
+  .tb-user.tb-style1:hover,
+  .active .tb-user.tb-style1 {
+    background-color: $base-color5;
+  }
+
+  .tb-user-img {
+    position: relative;
+    border-radius: 50%;
+    margin-right: 8px;
+
+    img {
+      height: 32px;
+      width: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .tb-user-name {
+    font-size: 14px;
+    margin-bottom: 0px;
+  }
+
+  .tb-user-time {
+    display: block;
+    font-size: 12px;
+    color: $base-color3;
+    line-height: 1.2;
+  }
+
+  .tb-online-status {
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9);
+  }
+
+  .tb-group-member {
+    font-size: 12px;
+    line-height: 1.3em;
+  }
+}
+
+// Style2
+.tb-user.tb-style2 {
+  display: flex;
+  align-items: center;
+
+  .tb-user-img {
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    overflow: hidden;
+    margin-right: 10px;
+    flex: none;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .tb-user-name {
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding-top: 2px;
+  }
+
+  .tb-online-status {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+// Style3
+.tb-user.tb-style3 {
+  display: flex;
+
+  .tb-user-img {
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    overflow: hidden;
+    margin-right: 10px;
+    flex: none;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .tb-user-name {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 3px;
+    padding-top: 8px;
+  }
+
+  .tb-online-status {
+    height: 8px;
+    width: 8px;
+  }
+  .tb-post-label.tb-style1 {
+    margin-bottom: -2px;
+  }
+}
+
+// Style4
+.tb-user.tb-style4 {
+  display: flex;
+  align-items: center;
+
+  .tb-user-img {
+    margin-right: 20px;
+    height: 128px;
+    width: 128px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .tb-user-name {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .tb-lavel {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+
+  .tb-user-btns {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    min-width: 140px;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+}
+/*========== End User  ==========*/

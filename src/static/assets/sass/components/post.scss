@@ -1,0 +1,121 @@
+/*========== Start Post  ==========*/
+.tb-post.tb-style1 {
+  .tb-post-text {
+    font-size: 21px;
+    line-height: 1.6em;
+    color: $base-color1
+  }
+}
+
+.tb-post.tb-style2 {
+  .tb-post-text {
+    font-size: 14px;
+    line-height: 1.6em;
+    color: $base-color1
+  }
+}
+
+.tb-profile-post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .tb-post-comments,
+  .tb-post-view {
+    font-size: 14px;
+  }
+}
+
+.tb-post.tb-style3 {
+  .tb-post-user {
+    display: flex;
+    align-items: center;
+  }
+
+  .tb-post-user-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+
+  .tb-post-user-name {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .tb-post-user-email {
+    font-size: 13px;
+    color: $base-color3;
+    display: block;
+    line-height: 14px;
+  }
+
+  .tb-post-heading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 27px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .8));
+  }
+
+  .tb-post-title {
+    margin: 0;
+    font-size: 21px;
+    color: #fff;
+    a {
+      color: inherit;
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  .tb-post-thumb {
+    position: relative;
+    display: block;
+    img {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+    }
+    img.tb-radious4 {
+      border-radius: 4px;
+    }
+  }
+
+  .tb-post-text {
+    font-size: 14px;
+    line-height: 1.6em;
+  }
+}
+
+.tb-post-label.tb-style1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    font-size: 12px;
+    color: $base-color3;
+    line-height: 1.4em;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    &:not(:last-child):after {
+      content: "•";
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    i {
+      display: flex;
+      font-size: 16px;
+    }
+  }
+}
+/*========== End Post  ==========*/

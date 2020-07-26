@@ -1,0 +1,81 @@
+/*========== Start ProgressBar  ==========*/
+.tb-progress-lavel {
+  &.tb-style1 {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 18px;
+    }
+  }
+  &.tb-style2 {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 2px;
+    padding: 0 6px 1px 2px;
+    i {
+      font-size: 18px;
+    }
+  }
+}
+
+.tb-progressbar-wrap.tb-style1 {
+  .tb-single-progress:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .tb-progressbar {
+    width: 100%;
+    overflow: hidden;
+    height: 5px;
+    background-color: $base-color4;
+    border-radius: 1.6em;
+  }
+
+  .tb-progressbar-in {
+    height: 100%;
+    background-color: $accent-color1;
+    border-radius: 1.6em  0 0 1.6em;
+  }
+
+  .tb-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .tb-progress-title {
+    font-size: 13px;
+    color: $base-color2;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.3em;
+    margin-right: 20px;
+  }
+
+  .tb-progress-percentage {
+    font-size: 13px;
+    color: $base-color3;
+    line-height: 1.3em;
+  }
+  &.tb-color1 {
+    .tb-progressbar-in {
+      background-color: $accent-color4;
+    }
+  }
+  &.tb-color2 {
+    .tb-progressbar-in {
+      background-color: $accent-color3;
+    }
+  }
+  &.tb-color3 {
+    .tb-progressbar-in {
+      background-color: $accent-color2;
+    }
+  }
+  &.tb-color4 {
+    .tb-progressbar-in {
+      background-color: $accent-color1;
+    }
+  }
+}
+/*========== End ProgressBar  ==========*/

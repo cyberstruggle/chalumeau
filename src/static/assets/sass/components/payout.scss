@@ -1,0 +1,31 @@
+/*========== Start Payout List  ==========*/
+.tb-payouts-list {
+  padding-top: 15px;
+  li:not(:last-child){
+    margin-bottom: 10px;
+  }
+}
+.tb-payout-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: $base-color3;
+  margin-bottom: 2px;
+
+  i {
+    font-size: 13px;
+    position: relative;
+    top: 1px;
+    margin-right: 3px;
+  }
+}
+.tb-payout-number {
+  font-size: 24px;
+  color: $base-color1;
+  line-height: 1.2em;
+}
+.tb-payouts-card {
+  .tb-btn.tb-style2:hover {
+    background-color: transparent;
+  }
+}
+/*========== End Payout List  ==========*/

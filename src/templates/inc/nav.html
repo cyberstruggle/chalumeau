@@ -1,0 +1,36 @@
+<ul class="tb-sidebar-nav-list tb-mp0">
+    <li>
+      <a href="/">
+        <span class="tb-sidebar-link-title">
+          <span class="tb-sidebar-link-icon"><i class="material-icons-outlined">home</i></span>
+          <span class="tb-sidebar-link-text">Dashboard</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'web:machines_list_view' %}">
+          
+        <span class="tb-sidebar-link-title">
+          <span class="tb-sidebar-link-icon"><i class="material-icons-outlined">dns</i></span>
+          <span class="tb-sidebar-link-text">Machines</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="{% url 'web:machine_cred_list_view' %}">
+        <span class="tb-sidebar-link-title">
+          <span class="tb-sidebar-link-icon"><i class="material-icons-outlined">lock</i></span>
+          <span class="tb-sidebar-link-text">Credentials</span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a href="{% url 'web:export_password_list_view' %}">
+        <span class="tb-sidebar-link-title">
+          <span class="tb-sidebar-link-icon"><i class="material-icons-outlined">description</i></span>
+          <span class="tb-sidebar-link-text">Download Password List</span>
+        </span>
+      </a>
+    </li>
+  </ul><!-- .tb-sidebar-nav-list -->

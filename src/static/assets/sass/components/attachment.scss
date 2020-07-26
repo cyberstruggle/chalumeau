@@ -1,0 +1,88 @@
+/*========== Start Attachment List ==========*/
+.tb-attachment-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+
+  &.tb-style1 {
+    display: block;
+  }
+
+  li {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.tb-attachment {
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
+  background: $base-color5;
+  border-radius: 5px;
+  border: 1px solid $base-color4;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  width: 100%;
+  max-width: 245px;
+
+  .tb-attachment-img {
+    flex: none;
+    height: 34px;
+    width: 34px;
+    margin-right: 8px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .tb-attachment-file {
+    font-size: 40px;
+    margin-left: -5px;
+    margin-right: 2px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    color: $base-color3;
+  }
+
+  .tb-attachment-info {
+    flex: 1;
+  }
+
+  .tb-attachment-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+
+  .tb-attachment-size {
+    font-size: 12px;
+    color: $base-color3;
+    line-height: 1.2em;
+  }
+
+  .tb-attachment-toggle {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .tb-attachment-toggle-btn {
+      display: flex;
+      font-size: 22px;
+      cursor: pointer;
+      color: $base-color3;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $base-color2;
+      }
+    }
+  }
+}
+/*========== End Attachment List ==========*/

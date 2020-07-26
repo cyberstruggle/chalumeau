@@ -1,0 +1,1062 @@
+/*========== Start Form Element  ==========*/
+// Check Box Style
+.custom-control-input:disabled~.custom-control-label::before,
+.custom-control-label::before {
+  background-color: $main-color;
+  border-color: $base-color4;
+}
+
+.tb-checkbox-wrap.tb-style1 {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: $base-color3;
+  line-height: 1.3em;
+
+  .tb-checkbox {
+    margin-right: 8px;
+  }
+}
+
+.tb-checkbox-wrap.tb-style1.tb-color1 {
+  color: $base-color1;
+}
+
+.tb-checkbox-text.tb-style1 {
+  font-size: 14px;
+}
+
+.tb-signup-img.tb-style1 {
+  padding: 0 15px;
+}
+
+.tb-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .tb-checkbox {
+    margin-right: 5px;
+  }
+}
+
+.tb-checkbox.tb-style1,
+.tb-checkbox.tb-style2,
+.tb-checkbox.tb-style3 {
+  display: block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  overflow: hidden;
+  flex: none;
+
+  [type="checkbox"]:disabled+.tb-checkbox-icon {
+    opacity: 0.25;
+  }
+
+  input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+  }
+
+  .tb-checkbox-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $base-color4;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    i {
+      opacity: 0;
+    }
+  }
+
+  [type="checkbox"]:checked+.tb-checkbox-icon {
+
+    i {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+
+  &.tb-color1 {
+    [type="checkbox"]:checked+.tb-checkbox-icon {
+      background-color: $accent-color1;
+      border-color: $accent-color1;
+    }
+  }
+
+  &.tb-color2 {
+    [type="checkbox"]:checked+.tb-checkbox-icon {
+      background-color: $accent-color2;
+      border-color: $accent-color2;
+    }
+  }
+
+  &.tb-color3 {
+    [type="checkbox"]:checked+.tb-checkbox-icon {
+      background-color: $accent-color3;
+      border-color: $accent-color3;
+    }
+  }
+
+  &.tb-color4 {
+    [type="checkbox"]:checked+.tb-checkbox-icon {
+      background-color: $accent-color4;
+      border-color: $accent-color4;
+    }
+  }
+
+  &.tb-color5 {
+    [type="checkbox"]:checked+.tb-checkbox-icon {
+      background-color: $accent-color5;
+      border-color: $accent-color5;
+    }
+  }
+
+  &.tb-color6 {
+    [type="checkbox"]:checked+.tb-checkbox-icon {
+      background-color: $accent-color6;
+      border-color: $accent-color6;
+    }
+  }
+}
+
+.tb-checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tb-checkbox-wrap {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.tb-checkbox.tb-style2 {
+  .tb-checkbox-icon {
+    border-width: 2px;
+    border-color: $base-color3;
+
+  }
+
+  &.tb-size1 {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.tb-checkbox.tb-style3 {
+  height: 12px;
+  width: 12px;
+
+  .tb-checkbox-icon {
+    border-radius: 2px;
+    border-color: $base-color3;
+    font-size: 10px;
+    padding-bottom: 0;
+  }
+
+}
+
+/** Custom Select **/
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tb-custom-select-wrapper {
+  position: relative;
+  user-select: none;
+}
+
+.tb-custom-select-wrapper select {
+  display: none;
+}
+
+.tb-custom-select {
+  cursor: pointer;
+  max-width: 100%;
+  padding: 0;
+  line-height: 1.5;
+  vertical-align: middle;
+  background: transparent;
+  border-radius: 0;
+  appearance: none;
+  display: block;
+  position: relative;
+  border-radius: 2px;
+}
+
+.custom-select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+  padding-right: 17px;
+  min-height: 29px;
+}
+
+.custom-select-trigger:hover {
+  color: $base-color2;
+}
+
+.custom-select-trigger:after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 49%;
+  transform: translateY(-50%);
+  font-size: 9px;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $base-color2;
+  border-radius: 4px;
+}
+
+.tb-custom-select.opened .custom-select-trigger:after,
+.tb-toggle-areea.tb-active .tb-toggle-btn i.fa-sort-desc {
+  transform: translateY(-50%) rotate(-180deg);
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0px;
+  right: 0;
+  margin-top: 0px;
+  background-color: $main-color;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px);
+  z-index: 10;
+  border: 1px solid $base-color4;
+  border-radius: 4px;
+  border-bottom-width: 2px;
+  max-height: 285px;
+  overflow: auto;
+  width: max-content;
+}
+
+.tb-custom-select.opened .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 7px 15px;
+  border-bottom: 1px solid $base-color4;
+  color: $base-color2;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  background: $main-color;
+  font-size: 13px;
+}
+
+.custom-option:last-child {
+  border: none;
+}
+
+.custom-option:hover {
+  background: $base-color5;
+}
+
+/*Style Two*/
+.tb-form-field.tb-style1 .custom-select-trigger {
+  border: 1px solid $base-color4;
+  background-color: $main-color;
+  font-weight: 400;
+}
+
+.tb-form-field.tb-style1 .tb-custom-select.opened .custom-select-trigger {
+  border-color: #13ce66;
+}
+
+.tb-custom-select-wrap.tb-style2 {
+  .custom-select-trigger {
+    min-height: 36px;
+    border: 1px solid $base-color4;
+    padding: 3px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: $base-color1;
+
+    &:after {
+      right: 15px;
+      border-top: 5px solid $base-color1;
+    }
+  }
+
+  .custom-options {
+    width: 100%;
+  }
+
+  .custom-option {
+    font-size: 14px;
+  }
+
+  &.tb-color1 {
+    .custom-select-trigger {
+      color: $base-color3;
+
+      &:after {
+        border-top: 5px solid $base-color3;
+      }
+    }
+  }
+}
+
+/*End Custom Select*/
+.tb-login-wrap.tb-style1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 0;
+}
+
+.tb-login-wrap.tb-style2 {
+  display: flex;
+
+  .tb-left-login {
+    flex: none;
+    max-width: 600px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 60px;
+
+    .tb-footer-nav {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 11px 0;
+    }
+  }
+
+  .tb-left-right {
+    flex: 1;
+  }
+}
+
+.tb-login-wrap.tb-style3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 45px 0;
+
+  .tb-left-login,
+  .tb-left-right {
+    padding: 15px;
+  }
+}
+
+.tb-login-image {
+  min-width: 460px;
+  border-radius: 4px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  &.tb-height1 {
+    height: 573px;
+  }
+
+  &.tb-height2 {
+    height: 620px;
+  }
+
+  .tb-login-image-text {
+    color: #fff;
+    padding: 50px;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .8));
+
+    p {
+      font-size: 16px;
+      line-height: 1.6em;
+      margin-bottom: 9px;
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.tb-forget-pass-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// Start Form Style
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input,
+textarea {
+  border: 1px solid $base-color4;
+  font-size: 14px;
+  line-height: 1.6em;
+  padding: 6px 15px;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: $main-color;
+
+  &:focus {
+    border-color: $base-color3;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: initial;
+}
+
+textarea {
+  height: 147px;
+}
+
+.form-control::-webkit-input-placeholder,
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $base-color3;
+}
+
+.form-control::-moz-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $base-color3;
+}
+
+.form-control:-ms-input-placeholder,
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $base-color3;
+}
+
+.form-control:-moz-placeholder,
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $base-color3;
+}
+
+form .row {
+  margin-top: 0px;
+}
+
+form .row>div {
+  margin-top: 0px;
+}
+
+.tb-form-separator {
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  color: $base-color3;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    background-color: $base-color4;
+    top: 9px;
+  }
+
+  &:before {
+    left: -16px;
+  }
+
+  &:after {
+    right: -16px;
+  }
+}
+
+.tb-form.tb-style1,
+.tb-form.tb-style2 {
+  .tb-form-title {
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+
+  .tb-form-subtitle {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+
+  .row {
+    margin-right: -7px;
+    margin-left: -7px;
+    margin-top: -15px;
+
+    [class*=col-] {
+      margin-top: 15px;
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
+}
+
+.tb-form.tb-style2 {
+  max-width: 460px;
+  width: 100%;
+  background-color: $main-color;
+  border-radius: 4px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.tb-social-area.tb-style1 {
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.tb-form-btn.tb-style1 {
+  width: 100%;
+  padding: 0px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6em;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  i {
+    width: 36px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  span {
+    flex: 1;
+  }
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.tb-form-btn.tb-style1 {
+  &.tb-color1 {
+    background-color: $accent-color2;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &.tb-colo2 {
+    background-color: $accent-color2;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  &.tb-colo3 {
+    background-color: $accent-color4;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.tb-form-btn.tb-style2 {
+  &.tb-color1 {
+    &:before {
+      background-color: $base-color3;
+    }
+
+    &:after {
+      background-color: $base-color2;
+    }
+  }
+}
+
+.tb-form-btn.tb-style2 {
+  display: inline-block;
+  position: relative;
+  line-height: 1.35em;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $base-color2;
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform-origin: right center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleX(0);
+    background-color: $base-color1;
+  }
+}
+
+.tb-checkbox-text {
+  .tb-form-btn.tb-style2 {
+
+    &:before {
+      background-color: $base-color4;
+    }
+  }
+}
+
+.tb-form-btn.tb-style2:hover:after {
+  opacity: 1;
+  transform-origin: left center;
+  transform: scaleX(1);
+}
+
+.tb-form-btn.tb-style2.tb-type1:before,
+.tb-form-btn.tb-style2.tb-type1:after {
+  height: 1px;
+}
+
+.tb-form-field-wrap.tb-style1 {
+  display: flex;
+  align-items: flex-start;
+
+  .tb-form-field-label {
+    flex: none;
+    width: 160px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.2em;
+    padding: 0px 20px;
+    text-align: right;
+    min-height: 36px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .tb-form-field {
+    flex: 1;
+    width: 100%;
+  }
+
+  .tb-with-left-icon {
+    position: relative;
+
+    .tb-form-field-left-icon {
+      position: absolute;
+      font-size: 21px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      width: 40px;
+      justify-content: center;
+      color: $base-color3;
+    }
+
+    input {
+      padding-left: 45px;
+    }
+  }
+}
+
+.tb-profile-setting-container .tb-form-field-wrap.tb-style1 .tb-form-field-label {
+  align-items: flex-start;
+}
+
+.tb-form-field-wrap.tb-style2 {
+  .tb-form-field-label {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+}
+
+.tb-form-field.tb-with-left-text {
+  position: relative;
+
+  .tb-form-field-left-text {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    height: calc(100% - 2px);
+    width: 35px;
+    background-color: $base-color5;
+    border-right: 1px solid $base-color4;
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: $base-color3;
+  }
+
+  input {
+    padding-left: 48px;
+  }
+}
+
+.tb-form-field.tb-with-right-text {
+  position: relative;
+
+  .tb-form-field-right-text {
+    position: absolute;
+    right: 1px;
+    height: calc(100% - 2px);
+    top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 52px;
+    border-left: 1px solid $base-color4;
+    background-color: $base-color5;
+    border-radius: 0 4px 4px 0;
+    color: $base-color3;
+  }
+
+  input {
+    padding-right: 67px;
+  }
+}
+
+.tb-form-field.tb-color1 input {
+  color: $base-color1;
+}
+
+.tb-form-field-note {
+  font-size: 13px;
+  color: $base-color3;
+  margin-top: 5px;
+}
+
+// Start radio Button
+
+.tb-radio-wrap.tb-style1 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .tb-radio {
+    margin-bottom: 4px;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    line-height: 1.6em;
+    margin-bottom: 0;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    input {
+      position: absolute;
+      left: -9999px;
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+      left: 0;
+      display: block;
+      width: 12px;
+      height: 12px;
+      outline: 0;
+      border: 1px solid $base-color3;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+    }
+
+    input:checked+i {
+      border-color: $accent-color2;
+      border-width: 4px;
+    }
+  }
+
+  &.tb-type1 {
+    .tb-radio {
+      margin-right: 25px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// End radio Button
+
+// Start Switch Style
+.tb-switch-wrap.tb-style1 {
+  display: flex;
+  justify-content: space-between;
+
+  .tb-switch-text {
+    font-size: 14px;
+  }
+}
+
+.tb-switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: $base-color3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  span {
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 0.99px 0.01px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.tb-active {
+    background-color: $accent-color3;
+
+    span {
+      left: 18px;
+    }
+  }
+}
+
+.form-control {
+  font-size: 14px;
+  border-color: $base-color4;
+  background-color: $main-color;
+}
+
+.form-text {
+  font-size: 12px;
+  color: $base-color3 !important;
+  line-height: 1.6em;
+}
+
+.invalid-feedback,
+.valid-feedback {
+  font-size: 12px;
+  line-height: 1.6em;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: none;
+}
+
+.input-group-text {
+  padding: 3px 10px;
+  line-height: 1.6em;
+}
+
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus,
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus,
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control:focus {
+  color: $base-color2;
+}
+
+.input-group-text {
+  color: $base-color2;
+  background-color: $base-color5;
+  border-color: $base-color4;
+}
+
+.custom-control-label::before {
+  border-color: $base-color4;
+}
+
+.form-control:focus {
+  color: $base-color2;
+  background-color: $main-color;
+  border-color: $accent-color6;
+  box-shadow: none;
+}
+
+.input-group .btn {
+  padding: 0 15px;
+  font-weight: 400;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+  background-color: $accent-color6;
+  border-color: $accent-color6;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: $accent-color4;
+}
+
+.invalid-feedback,
+.form-check-input.is-invalid~.form-check-label,
+.was-validated .form-check-input:invalid~.form-check-label {
+  color: $accent-color4;
+}
+
+.dropdown-item {
+  color: $base-color2;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  border-color: $accent-color6;
+  background-color: $accent-color6;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: $accent-color3;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: $base-color4;
+}
+
+.custom-control-label::after {
+  left: -24px;
+}
+
+.tb-cs-input-btn {
+  position: relative;
+}
+
+.tb-cs-input-btn:before {
+  content: '';
+  position: absolute;
+  height: 50px;
+  width: 100px;
+  background-color: $main-color;
+  left: 5px;
+  bottom: 1px;
+  pointer-events: none;
+}
+
+.tb-cs-input-btn span {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 80px;
+  height: 28px;
+  border: 1px solid $base-color4;
+  text-align: center;
+  line-height: 26px;
+  font-size: 13px;
+  border-radius: 4px;
+  font-weight: 500;
+  background: $base-color5;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.tb-cs-input-btn:hover span {
+  background-color: $base-color6;
+}
+
+.form-control-file:hover {
+  cursor: pointer;
+}
+
+.form-control-file {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+// End Switch Style
+@media screen and (max-width: 991px) {
+  .tb-login-wrap.tb-style3 {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .tb-login-image {
+    min-width: 100%;
+  }
+
+  .tb-login-image-text br {
+    display: none;
+  }
+
+  .tb-form-field-wrap.tb-style1 {
+    flex-direction: column;
+  }
+
+  .tb-form-field-wrap.tb-style1 .tb-form-field-label {
+    width: 100%;
+    padding-right: 0;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+}
+
+/*========== End Form Element  ==========*/

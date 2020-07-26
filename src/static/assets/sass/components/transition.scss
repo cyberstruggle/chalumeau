@@ -1,0 +1,56 @@
+/*========== Start Testimonial  ==========*/
+.tb-transition-list.tb-style1 {
+  li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $base-color4;
+    padding: 15px 30px;
+  }
+
+  .tb-transition-date {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 13px;
+
+    span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $base-color3;
+    }
+  }
+
+  .tb-transition-icon {
+    display: flex;
+    font-size: 40px;
+    color: $base-color3;
+    margin-right: 13px;
+  }
+
+  .tb-transition-heading,
+  .tb-transition-amount {
+    h2 {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    span {
+      font-size: 13px;
+      display: block;
+    }
+  }
+
+  .tb-transition-amount {
+    text-align: right;
+    flex: 1;
+  }
+}
+@media screen and (max-width: 575px) {
+  .tb-transition-list.tb-style1 .tb-transition-heading h2,
+  .tb-transition-list.tb-style1 .tb-transition-amount h2 {
+    font-size: 14px;
+  }
+}
+/*========== End Testimonial  ==========*/

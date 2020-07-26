@@ -1,0 +1,304 @@
+/*========== Start Road Map  ==========*/
+.tb-for-1-day {
+  width: 14.2857%;
+}
+
+.tb-for-2-day {
+  width: 28.5714%;
+}
+
+.tb-for-3-day {
+  width: 42.8571%;
+}
+
+.tb-for-4-day {
+  width: 57.1429%;
+}
+
+.tb-for-5-day {
+  width: 71.4286%;
+}
+
+.tb-for-6-day {
+  width: 85.7143%;
+}
+
+.tb-for-7-day {
+  width: 100%;
+}
+
+.tb-task-color1 {
+  .tb-task-color-in {
+    background-color: rgba($accent-color1, 0.4);
+  }
+
+  .tb-progressbar-in {
+    background-color: $accent-color1;
+  }
+}
+
+.tb-task-color2 {
+  .tb-task-color-in {
+    background-color: rgba(80, 180, 60, 0.4);
+  }
+
+  .tb-progressbar-in {
+    background-color: $accent-color3;
+  }
+}
+
+.tb-roadmap-task-heading {
+  padding: 10px 30px;
+  background-color: $main-color;
+  position: relative;
+}
+
+.tb-roadmap-task-title {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  padding: 5px 13px;
+  padding-right: 46px;
+  line-height: 1.6em;
+  border: 1px solid $base-color4;
+  border-radius: 4px;
+  background-color: $base-color5;
+  font-weight: 500;
+}
+
+.tb-roadmap-task-titleoption {
+  position: absolute;
+  display: flex;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  color: $base-color3;
+}
+
+.tb-roadmap-user {
+  flex: none;
+  width: 230px;
+  padding: 14px 30px;
+
+  .tb-project-card-user li {
+    height: 32px;
+    width: 32px;
+
+    &.tb-project-card-user-more {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+.tb-roadmap-user-task-list {
+  border-top: 1px solid $base-color4;
+
+  >li {
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid $base-color4;
+    cursor: pointer;
+  }
+
+  .tb-roadmap-taskes {
+    flex: 1;
+    display: flex;
+  }
+
+  .tb-roadmap-single-task {
+    padding: 10px;
+    flex: none;
+    padding-top: 0;
+    margin-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .tb-roadmap-single-task-in {
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6em;
+    padding: 9px 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    color: #fff;
+    background-color: $main-color;
+
+    .tb-task-color-in {
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 4px;
+    }
+  }
+
+  .tb-roadmap-task-text {
+    padding-right: 10px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+
+  .tb-roadmap-task-options {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 17px;
+    right: 7px;
+    display: flex;
+    z-index: 2;
+  }
+
+  .tb-progressbar-in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+.tb-roadmap-body .ui-sortable-placeholder:before {
+  border-radius: 0px;
+  border-width: 1px;
+  background-color: $base-color5;
+}
+
+.tb-roadmap-body .tb-roadmap-taskes .ui-sortable-placeholder:before {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.tb-roadmap-body .tb-roadmap-taskes .ui-sortable-placeholder:before {
+  border-radius: 4px;
+}
+
+.tb-roadmap-body .tb-roadmap-row.ui-sortable-helper,
+.tb-roadmap-body .tb-roadmap-user-task-list>.ui-sortable-helper {
+  border: 1px solid $base-color4 !important;
+  background: $main-color;
+}
+
+.tb-roadmap-head {
+  height: 51px;
+  position: relative;
+}
+
+.tb-roadmap-head-in {
+  display: flex;
+  border-bottom: 1px solid $base-color4;
+  background-color: $base-color5;
+  height: 51px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  .tb-roadmap-head-left {
+    flex: none;
+    width: 230px;
+    padding: 8px 30px;
+  }
+
+  .tb-roadmap-head-right {
+    flex: 1;
+  }
+
+  .tb-roadmap-week {
+    display: flex;
+
+    li {
+      flex: 1;
+      text-align: center;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $base-color3;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 3000px;
+        width: 1px;
+        background-color: $base-color4;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .custom-select-trigger {
+    min-height: 30px;
+    border: 1px solid $base-color4;
+    border-radius: 4px;
+    background-color: $main-color;
+    padding: 5px 10px;
+    padding-right: 20px;
+    font-weight: 500;
+
+    &:after {
+      right: 10px;
+    }
+  }
+
+  .custom-option {
+    padding: 5px 10px;
+  }
+
+  .custom-options {
+    width: 100%;
+  }
+}
+
+.tb-roadmap {
+  position: relative;
+  overflow: hidden;
+}
+
+.tb-roadmap-tab-btn {
+  border: 1px solid $base-color3;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .tb-btn {
+    font-size: 14px;
+    line-height: 1.6em;
+    color: $base-color3;
+    min-width: 80px;
+    padding: 3px 10px;
+
+    &:hover {
+      background-color: $base-color5;
+    }
+
+    &.tb-active {
+      background-color: $base-color3;
+      color: $main-color;
+    }
+  }
+}
+
+.tb-roadmap-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tb-roadmap-tab-btn {
+    margin-right: 10px;
+  }
+}
+
+.tb-roadmap-out {
+  min-width: 800px;
+}
+
+/*========== End Road Map  ==========*/

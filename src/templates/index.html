@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+<div class="col-lg-12">
+    <div class="tb-sectin-heading tb-style1">
+    <div class="tb-sectin-heading-left">
+        <h2 class="tb-section-title">Welcome to Chalumeau Dashboard</h2>
+    </div>
+    </div>
+    <div class="tb-height-b30 tb-height-lg-b30"></div>
+    <hr />
+</div>
+</div>
+<div class="tb-height-b30 tb-height-lg-b30"></div>
+<div class="row">
+<div class="col-lg-3 col-sm-6">
+    <div class="tb-card tb-style1 text-center">
+    <div class="tb-card-body">
+        <div class="tb-height-b30 tb-height-lg-b30"></div>
+        <div class="tb-iconbox tb-style1">
+        <div class="tb-icon tb-icon-color1 tb-radious50 tb-flex">
+            <i class="material-icons-outlined">dns</i>
+        </div>
+        <div class="tb-iconbox-text">
+            <h3 class="tb-iconbox-heading">{{all_Machines.count}}</h3>
+            <div class="tb-iconbox-sub-heading">Machine's</div>
+            <div class="tb-height-b25 tb-height-lg-b25"></div>
+            <hr />
+        </div>
+        </div>
+    </div>
+    </div>
+</div><!-- .col -->
+<div class="col-lg-3 col-sm-6">
+    <div class="tb-card tb-style1 text-center">
+    <div class="tb-card-body">
+        <div class="tb-height-b30 tb-height-lg-b30"></div>
+        <div class="tb-iconbox tb-style1">
+        <div class="tb-icon tb-icon-color2 tb-radious50 tb-flex">
+            <i class="material-icons-outlined">store</i>
+        </div>
+        <div class="tb-iconbox-text">
+            <h3 class="tb-iconbox-heading">{{all_Credentials.count}}</h3>
+            <div class="tb-iconbox-sub-heading">Credential's</div>
+            <div class="tb-height-b25 tb-height-lg-b25"></div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div><!-- .col -->
+<div class="col-lg-3 col-sm-6">
+    <div class="tb-card tb-style1 text-center">
+    <div class="tb-card-body">
+        <div class="tb-height-b30 tb-height-lg-b30"></div>
+        <div class="tb-iconbox tb-style1">
+        <div class="tb-icon tb-icon-color3 tb-radious50 tb-flex">
+            <i class="material-icons-outlined">flag</i>
+        </div>
+        <div class="tb-iconbox-text">
+            <h3 class="tb-iconbox-heading">{{clear_text_passwords.count}}</h3>
+            <div class="tb-iconbox-sub-heading">Plain Text Passwords</div>
+            <div class="tb-height-b25 tb-height-lg-b25"></div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- .col -->
+<div class="col-lg-3 col-sm-6">
+    <div class="tb-card tb-style1 text-center">
+    <div class="tb-card-body">
+        <div class="tb-height-b30 tb-height-lg-b30"></div>
+        <div class="tb-iconbox tb-style1">
+        <div class="tb-icon tb-icon-color4 tb-radious50 tb-flex">
+            <i class="material-icons-outlined">receipt</i>
+        </div>
+        <div class="tb-iconbox-text">
+            <h3 class="tb-iconbox-heading">{{tickets.count}}</h3>
+            <div class="tb-iconbox-sub-heading">Tickets</div>
+            <div class="tb-height-b25 tb-height-lg-b25"></div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- .col -->
+</div>
+<div class="tb-height-b30 tb-height-lg-b30"></div>
+<div class="row">
+<!-- .col -->
+
+
+
+<div class="col-lg-4">
+    <div class="tb-card tb-style1 tb-height-100p">
+    <div class="tb-card-heading">
+        <div class="tb-card-heading-left">
+        <h2 class="tb-card-title">Credentials Types</h2>
+        </div>
+    </div>
+    <div class="tb-card-body">
+        <div class="tb-chart-wrap tb-style3">
+        <div class="tb-chart-inside">
+            <div class="tb-chart-in">
+            <input type="hidden" name="ticket_pre" value="{{ticket_pre}}" id="ticket_pre">
+            <input type="hidden" name="clear_pre" value="{{clear_pre}}" id="clear_pre">
+            <input type="hidden" name="hash_pre" value="{{hash_pre}}" id="hash_pre">
+            <canvas id="tb-chart3" height="220" width="220"></canvas>
+            </div>
+        </div>
+        <div class="tb-height-b15 tb-height-lg-b15"></div>
+        <ul class="tb-circle-stroke tb-style1">
+            <li>
+            <span class="tb-circle-color" data-bulet-color="#ffcc00"></span>
+            <span class="tb-circle-label">Hash</span>
+            </li>
+            <li>
+            <span class="tb-circle-color" data-bulet-color="#ff3b30"></span>
+            <span class="tb-circle-label">Plain Text</span>
+            </li>
+            <li>
+            <span class="tb-circle-color" data-bulet-color="#5856d6"></span>
+            <span class="tb-circle-label">Ticket</span>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="col-lg-8">
+    <div class="tb-card tb-style1">
+    <div class="tb-card-heading">
+        <div class="tb-card-heading-left">
+        <h2 class="tb-card-title">Recently Received Credentials</h2>
+        </div>
+        <div class="tb-card-heading-right">
+        <a href="{% url 'web:machine_cred_list_view' %}" class="tb-btn tb-style1 tb-small">View All</a>
+        </div>
+    </div>
+    <div class="tb-card-body">
+        <div class="tb-table tb-style1 table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Machine</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Type</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for Credential in last_5objects %}
+                <tr>
+                  <td>{{Credential.machine}}</td>
+                  <td>{{Credential.username}}</td>
+                  <td>{{Credential.password}}</td>
+                  <td>{{Credential.get_type_display}}</td>
+    
+                </tr> 
+                {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <!-- .tb-table -->
+        <div class="tb-height-b30 tb-height-lg-b30"></div>
+    </div>
+    </div>
+</div>
+
+</div>
+{% endblock content %}
+    

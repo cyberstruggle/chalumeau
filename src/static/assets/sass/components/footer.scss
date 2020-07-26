@@ -1,0 +1,76 @@
+/*========== Start Footer  ==========*/
+.tb-footer {
+  &.tb-style1 {
+    border-top: 1px solid $base-color4;
+    padding: 10px 0;
+
+    .tb-footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.tb-footer-nav {
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  a {
+    font-weight: 500;
+    color: $base-color3;
+
+    &:hover {
+      color: $base-color2;
+    }
+  }
+}
+
+.tb-copyride {
+  font-size: 12px;
+  color: $base-color3;
+  line-height: 1.6em;
+
+  a {
+    &:hover {
+      color: $base-color2;
+    }
+  }
+}
+
+
+.tb-footer.tb-fixed-footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  background-color: $main-color;
+
+  .tb-footer-in {
+    background-color: $base-color5;
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 270px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .tb-footer.tb-fixed-footer .tb-footer-in {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tb-footer.tb-style1 .tb-footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tb-footer.tb-fixed-footer {
+    position: initial;
+  }
+}
+
+/*========== End Footer  ==========*/
